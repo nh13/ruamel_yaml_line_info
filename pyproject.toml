@@ -1,6 +1,6 @@
 [project]
 name          = "ruamel_yaml_line_info"
-version       = "0.1.1"
+version       = "0.1.2"
 description   = "Line information for ruamel.yaml."
 readme        = "README.md"
 authors       = [{name = "Nils Homer", email = "<nilshomer@gmail.com>"}]
