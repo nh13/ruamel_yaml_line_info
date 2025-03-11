@@ -18,7 +18,7 @@
 
 [language-badge]:       http://img.shields.io/badge/language-python-brightgreen.svg
 [language-link]:        http://www.python.org/
-[py-versions-badge]:    https://img.shields.io/badge/python-3.11_|_3.12-blue
+[py-versions-badge]:    https://img.shields.io/badge/python-3.9_|_3.10_|_3.11_|_3.12_|_3.13-blue
 [py-versions-link]:     https://github.com/nh13/ruamel_yaml_line_info
 [code-style-badge]:     https://img.shields.io/badge/code%20style-black-000000.svg
 [code-style-link]:      https://black.readthedocs.io/en/stable/
