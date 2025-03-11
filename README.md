@@ -32,8 +32,8 @@
 [license-link]:         https://github.com/nh13/ruamel_yaml_line_info/blob/main/LICENSE
 [python-package-badge]: https://github.com/nh13/ruamel_yaml_line_info/actions/workflows/tests.yml/badge.svg?branch=main
 [python-package-link]:  https://github.com/nh13/ruamel_yaml_line_info/actions/workflows/tests.yml
-[pypi-badge]:           https://badge.fury.io/py/ruamel_yaml_line_info.svg
-[pypi-link]:            https://pypi.python.org/pypi/ruamel_yaml_line_info
+[pypi-badge]:           https://badge.fury.io/py/ruamel-yaml-line-info.svg
+[pypi-link]:            https://pypi.python.org/pypi/ruamel-yaml-line-info
 [pypi-downloads-badge]: https://img.shields.io/pypi/dm/ruamel_yaml_line_info
 [pypi-downloads-link]:  https://pypi.python.org/pypi/ruamel_yaml_line_info
 
