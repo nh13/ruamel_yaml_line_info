@@ -208,7 +208,7 @@ class RoundTripConstructor(ruamel.yaml.constructor.RoundTripConstructor):
     Adapted from: https://stackoverflow.com/questions/45716281/parsing-yaml-get-line-numbers-even-in-ordered-maps
     """
 
-    def __init__(self, preserve_quotes: None | bool = None, loader: Any = None) -> None:
+    def __init__(self, preserve_quotes: Union[None, bool] = None, loader: Any = None) -> None:
         super().__init__(preserve_quotes=preserve_quotes, loader=loader)
         if not hasattr(self.loader, "comment_handling"):
             self.loader.comment_handling = None
