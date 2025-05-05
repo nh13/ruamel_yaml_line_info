@@ -66,6 +66,39 @@ with open(yaml_path, encoding="utf-8") as fh:
 
 and voila!
 
+### Example
+
+Consider the following YAML:
+
+```yaml
+foo: bar
+block: >
+  this is not
+  a multiline
+  block
+single_quote: 'single'
+double_quote: "double"
+```
+
+then we can get line and column information with
+
+```python
+>>> with open(yaml_path, encoding="utf-8") as fh:
+    yaml = ruamel_yaml_line_info.YAML(typ="rt").load("".join(fh))
+>>> print(yaml["foo"].lc)
+LineCol(0, 5)
+>>> print(yaml["block"].lc)
+LineCol(1, 7)
+>>> print(yaml["single_quote"].lc)
+LineCol(5, 14)
+>>> print(yaml["double_quote"].lc)
+LineCol(6, 14)
+```
+
+where the first value in `LineCol` is the 0-based line, and the second value in `LineCol` is the 0-based column.
+
+See the test for more exapmles.
+
 ### Patching an existing YAML object
 
 If you already have a `ruamel.yaml.YAML` instance, you can add line
