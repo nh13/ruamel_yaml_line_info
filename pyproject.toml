@@ -24,7 +24,10 @@ documentation = "https://github.com/nh13/ruamel_yaml_line_info"
 "Bug Tracker" = "https://github.com/nh13/ruamel_yaml_line_info/issues"
 
 [tool.poetry]
-include       = ["LICENSE"]
+include       = [
+	"LICENSE",
+	{ path = "tests", format = "sdist" }
+]
 
 [tool.poetry.dependencies]
 python = ">=3.9.0,<4.0"
