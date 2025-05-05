@@ -80,6 +80,8 @@ single_quote: 'single'
 double_quote: "double"
 ```
 
+then we can get line and column information with
+
 ```python
 >>> with open(yaml_path, encoding="utf-8") as fh:
     yaml = ruamel_yaml_line_info.YAML(typ="rt").load("".join(fh))
@@ -94,6 +96,8 @@ LineCol(6, 14)
 ```
 
 where the first value in `LineCol` is the 0-based line, and the second value in `LineCol` is the 0-based column.
+
+See the test for more exapmles.
 
 ### Patching an existing YAML object
 
