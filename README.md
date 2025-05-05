@@ -12,30 +12,36 @@
 
 [![Python package][python-package-badge]][python-package-link]
 [![PyPI version][pypi-badge]][pypi-link]
+[![Conda version][conda-badge]][conda-link]
 [![PyPI download total][pypi-downloads-badge]][pypi-downloads-link]
+[![Conda download total][conda-downloads-badge]][conda-downloads-link]
 
 ---
 
-[language-badge]:       http://img.shields.io/badge/language-python-brightgreen.svg
-[language-link]:        http://www.python.org/
-[py-versions-badge]:    https://img.shields.io/badge/python-3.9_|_3.10_|_3.11_|_3.12_|_3.13-blue
-[py-versions-link]:     https://github.com/nh13/ruamel_yaml_line_info
-[code-style-badge]:     https://img.shields.io/badge/code%20style-black-000000.svg
-[code-style-link]:      https://black.readthedocs.io/en/stable/
-[type-checking-badge]:  http://www.mypy-lang.org/static/mypy_badge.svg
-[type-checking-link]:   http://mypy-lang.org/
-[pep-8-badge]:          https://img.shields.io/badge/code%20style-pep8-brightgreen.svg
-[pep-8-link]:           https://www.python.org/dev/peps/pep-0008/
-[code-coverage-badge]:  https://codecov.io/gh/nh13/ruamel_yaml_line_info/branch/main/graph/badge.svg
-[code-coverage-link]:   https://codecov.io/gh/nh13/ruamel_yaml_line_info
-[license-badge]:        http://img.shields.io/badge/license-MIT-blue.svg
-[license-link]:         https://github.com/nh13/ruamel_yaml_line_info/blob/main/LICENSE
-[python-package-badge]: https://github.com/nh13/ruamel_yaml_line_info/actions/workflows/tests.yml/badge.svg?branch=main
-[python-package-link]:  https://github.com/nh13/ruamel_yaml_line_info/actions/workflows/tests.yml
-[pypi-badge]:           https://badge.fury.io/py/ruamel-yaml-line-info.svg
-[pypi-link]:            https://pypi.python.org/pypi/ruamel-yaml-line-info
-[pypi-downloads-badge]: https://img.shields.io/pypi/dm/ruamel_yaml_line_info
-[pypi-downloads-link]:  https://pypi.python.org/pypi/ruamel_yaml_line_info
+[language-badge]:        http://img.shields.io/badge/language-python-brightgreen.svg
+[language-link]:         http://www.python.org/
+[py-versions-badge]:     https://img.shields.io/badge/python-3.9_|_3.10_|_3.11_|_3.12_|_3.13-blue
+[py-versions-link]:      https://github.com/nh13/ruamel_yaml_line_info
+[code-style-badge]:      https://img.shields.io/badge/code%20style-black-000000.svg
+[code-style-link]:       https://black.readthedocs.io/en/stable/
+[type-checking-badge]:   http://www.mypy-lang.org/static/mypy_badge.svg
+[type-checking-link]:    http://mypy-lang.org/
+[pep-8-badge]:           https://img.shields.io/badge/code%20style-pep8-brightgreen.svg
+[pep-8-link]:            https://www.python.org/dev/peps/pep-0008/
+[code-coverage-badge]:   https://codecov.io/gh/nh13/ruamel_yaml_line_info/branch/main/graph/badge.svg
+[code-coverage-link]:    https://codecov.io/gh/nh13/ruamel_yaml_line_info
+[license-badge]:         http://img.shields.io/badge/license-MIT-blue.svg
+[license-link]:          https://github.com/nh13/ruamel_yaml_line_info/blob/main/LICENSE
+[python-package-badge]:  https://github.com/nh13/ruamel_yaml_line_info/actions/workflows/tests.yml/badge.svg?branch=main
+[python-package-link]:   https://github.com/nh13/ruamel_yaml_line_info/actions/workflows/tests.yml
+[pypi-badge]:            https://badge.fury.io/py/ruamel-yaml-line-info.svg
+[pypi-link]:             https://pypi.python.org/pypi/ruamel-yaml-line-info
+[pypi-downloads-badge]:  https://img.shields.io/pypi/dm/ruamel_yaml_line_info
+[pypi-downloads-link]:   https://pypi.python.org/pypi/ruamel_yaml_line_info
+[conda-badge]:           https://anaconda.org/conda-forge/ruamel-yaml-line-info/badges/version.svg
+[conda-link]:            https://anaconda.org/conda-forge/ruamel-yaml-line-info
+[conda-downloads-badge]: https://anaconda.org/conda-forge/ruamel-yaml-line-info/badges/downloads.svg
+[conda-downloads-link]:  https://anaconda.org/conda-forge/ruamel-yaml-line-info
 
 
 Line information for [`ruamel.yaml`](https://pypi.org/project/ruamel.yaml/).
@@ -87,20 +93,20 @@ To check successful installation, run:
 python -c "import ruamel_yaml_line_info"
 ```
 
-## Installing into a Mamba Environment
+## Installing with Conda
 
-Install the Python package and dependency management tool [`poetry`](https://python-poetry.org/docs/#installation) and the environment manager [`mamba`](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html) using official documentation.
-Create and activate a virtual environment with Python 3.11 or greater:
+Install the environment manager [`mamba`](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html) using official documentation.
+Create and activate a conda environment with Python 3.11 or greater:
 
 ```console
-mamba create -n ruamel_yaml_line_info python=3.11
+mamba create -c conda-forge -n ruamel_yaml_line_info ruamel-yaml-line-info python=3.11
 mamba activate ruamel_yaml_line_info
 ```
 
-Then, because Poetry will auto-detect an activated environment, install the project with:
+Alternatively, install into an existing conda environment:
 
 ```console
-poetry install
+mamba install -n <ENVIRONMENT> -c conda-forge ruamel-yaml-line-info
 ```
 
 To check successful installation, run:
