@@ -205,3 +205,24 @@ def test_comment() -> None:
     data = yaml.load("foo:\n  # some comment\n  bar: cow\n")
     assert str(data) == "{'foo': {'bar': 'cow'}}"
     assert data["foo"].ca.comment[1][0].value == "# some comment\n"
+
+
+@pytest.mark.parametrize(
+    ("in_text", "parsed_as", "out_repr"),
+    [
+        ("true", True, "True"),
+        ("false", False, "False"),
+        ("0", 0, "0"),
+        ("1", 1, "1"),
+        ("1.1", 1.1, "1.1"),
+        ("'bar'", "bar", "'bar'"),
+    ],
+)
+def test_basic_types(in_text: str, parsed_as: Any, out_repr: str) -> None:
+    """Tests basic in-flight and represented parsing."""
+    yaml = ruamel_yaml_line_info.YAML(typ="rt", pure=True)
+    data = yaml.load(f"foo: {in_text}")
+    assert data["foo"] == parsed_as
+    lc = data["foo"].lc
+    assert (lc.line, lc.col) == (0, 5)
+    assert str(data) == f"{{'foo': {out_repr}}}"
