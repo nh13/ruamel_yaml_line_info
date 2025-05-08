@@ -160,6 +160,14 @@ class ScalarBoolean(ruamel.yaml.scalarbool.ScalarBoolean):
         ret_val.lc = None
         return ret_val
 
+    def __bool__(self) -> bool:
+        """Provide a real bool value."""
+        return False if self == 0 else True
+
+    def __repr__(self) -> str:
+        """Provide a real bool representation."""
+        return "True" if self else "False"
+
 
 class ScalarFloat(ruamel.yaml.scalarfloat.ScalarFloat):
     """Sub-class of to store line numbers."""
